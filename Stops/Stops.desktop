@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Stops
+Exec=qmlscene %U Stops/Main.qml
+Icon=Stops/Stops.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
