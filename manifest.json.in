@@ -9,7 +9,7 @@
             "desktop": "Stops/Stops.desktop"
         }
     },
-    "version": "0.1.1",
+    "version": "0.1.2",
     "maintainer": "Andrew Paugh <andrew.paugh@gmail.com>",
     "framework": "ubuntu-sdk-15.04.6"
 }
