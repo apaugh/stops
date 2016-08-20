@@ -3,6 +3,12 @@ import QtQuick.Layouts 1.0
 import Ubuntu.Components 1.3
 import U1db 1.0
 
+
+/*
+  The add stop page allows the user to add a new stop to the stop list.
+  Note: This is currently deprecated in favor of AddStopPopup.
+        It may be restored at a later date when nearby stop search is supported.
+*/
 Page {
     id: addStopPage
 

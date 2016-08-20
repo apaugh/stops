@@ -4,11 +4,18 @@ import Ubuntu.Components.ListItems 1.3
 import Ubuntu.Components.Popups 1.3
 import U1db 1.0
 
+/*
+  The stop list page lists all the added stops by name and bus number(s).
+*/
 Page {
     id: stopListPage
 
     Settings {
         id: settingsDialog
+    }
+
+    AddStopPopup {
+        id: addStopPopup
     }
 
     header: PageHeader {
@@ -21,17 +28,13 @@ Page {
             dividerColor: UbuntuColors.slate
         }
 
-        leadingActionBar {
-            actions: []
-        }
-
         trailingActionBar {
             actions:  [
                 Action {
                     iconName: "add"
                     text: i18n.tr("Add stop")
                     onTriggered: {
-                        mainStack.push(Qt.resolvedUrl("AddStop.qml"));
+                        PopupUtils.open(addStopPopup)
                     }
                 },
                 Action {
@@ -44,7 +47,18 @@ Page {
             ]}
     }
 
+    Label {
+        anchors.centerIn: parent
+        fontSize: "x-large"
+        wrapMode: Text.WordWrap
+        width: parent.width - units.gu(5)
+        horizontalAlignment: Text.AlignHCenter
+        text: "Welcome to Stops!\n\nTo add a new stop, tap the + icon on the top right.\n\nTo change your backend, tap the settings icon on the top right."
+        visible: stopsListView.count <= 0
+    }
+
     UbuntuListView {
+        id: stopsListView
         model: stopsDatabaseQuery
         width: stopListPage.width
 
@@ -53,7 +67,6 @@ Page {
             bottom: stopListPage.bottom
             horizontalCenter: parent.horizontalCenter
         }
-
         delegate: ListItem {
             Label {
                 id: stopNameLabel

@@ -3,15 +3,13 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
 import U1db 1.0
 
-/*!
-    \brief MainView with a Label and Button elements.
+/*
+  The Stops MainView holds the resources that are common to all pages, including
+  the database, backend object, and page stack.
 */
-
 MainView {
-    // objectName for functional testing purposes (autopilot-qt5)
     objectName: "stopsMain"
 
-    // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "stops.apaugh"
 
     width: units.gu(100)

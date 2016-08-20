@@ -34,12 +34,13 @@ desktop_file.CONFIG += no_check_exist
 INSTALLS+=config_files qml_files desktop_file
 
 DISTFILES += \
-    AddStop.qml \
     StopList.qml \
     ViewStop.qml \
     backends/translink.js \
     backends/onebusaway.js \
     backends/keys.js \
     Settings.qml \
-    Backend.qml
+    Backend.qml \
+    AddStopPopup.qml \
+    AddStop.qml
 

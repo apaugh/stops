@@ -3,10 +3,12 @@ import QtQuick.Layouts 1.0
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3
 
+/*
+    The view stop page lists all the arriving buses for the selected stop and their times.
+*/
 Page {
     id: viewStopPage
     property string stopNumber: ""
-    property var agencies: []
 
     header: PageHeader {
         id: pageHeader
