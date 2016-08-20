@@ -11,6 +11,11 @@ function getStopInfo(stopNumber, apiKey, onComplete) {
         if (request.readyState === XMLHttpRequest.DONE) {
             var responseData = JSON.parse(request.responseText);
 
+            if (responseData.Code == "1002") {
+                onComplete(null);
+                return false;
+            }
+
             // Create the result object.
             var result = {
                 name: responseData.Name,
