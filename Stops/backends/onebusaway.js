@@ -12,6 +12,7 @@ function getStopInfo(stopNumber, apiKey, onComplete) {
 
             if (responseData.code !== 200) {
                 onComplete(null);
+		// Just some more comments
                 return false;
             }
 
@@ -22,6 +23,7 @@ function getStopInfo(stopNumber, apiKey, onComplete) {
             for(var i = 0, len = responseRoutes.length; i < len; i++)
             {
                 routes.push(responseRoutes[i].shortName);
+		    //Testing
             }
 
             var result = {

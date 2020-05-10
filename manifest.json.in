@@ -1,6 +1,6 @@
 {
     "name": "stops.apaugh",
-    "description": "description of Stops",
+    "description": "A simple multi-network transit application.",
     "architecture": "@CLICK_ARCH@",
     "title": "Stops",
     "hooks": {
